@@ -1,0 +1,29 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+app-input {
+  width: 100%;
+  max-width: 500px;
+}
+
+app-button {
+  width: auto;
+  padding: 10px 30px;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px 15px;
+  }
+
+  app-button {
+    width: 100%;
+    max-width: 500px;
+  }
+}

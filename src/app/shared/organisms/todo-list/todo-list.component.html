@@ -1,0 +1,13 @@
+<div class="todo-list">
+  @for(task of tasks; track task.text; let i = $index) {
+  <div>
+    <app-todo-item
+      [taskText]="task.text"
+      [isCompleted]="task.completed"
+      (markComplete)="onTaskComplete(i, $event)"
+      (deleteTask)="onTaskDelete(i)"
+    >
+    </app-todo-item>
+  </div>
+  }
+</div>

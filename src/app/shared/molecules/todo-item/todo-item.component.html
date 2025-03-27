@@ -1,0 +1,6 @@
+<div class="todo-item">
+  <app-check-box [checked]="isCompleted" (toggle)="onToggleComplete($event)">
+  </app-check-box>
+  <span [class.completed]="isCompleted">{{ taskText }}</span>
+  <app-button buttonText="Excluir" (buttonAction)="onDelete()"> </app-button>
+</div>

@@ -1,0 +1,19 @@
+<div class="main-layout">
+  <div class="form-container">
+    <app-input
+      label="Nova Tarefa"
+      placeholder="Digite sua tarefa..."
+      [value]="newTask"
+      (onInputChange)="newTask = $event"
+    >
+    </app-input>
+    <app-button buttonText="Adicionar" (buttonAction)="onAddTask()">
+    </app-button>
+  </div>
+  <app-todo-list
+    [tasks]="tasks"
+    (updateTask)="onUpdateTask($event)"
+    (removeTask)="onRemoveTask($event)"
+  >
+  </app-todo-list>
+</div>
